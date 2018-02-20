@@ -1,8 +1,14 @@
 language: node_js
 node_js:
   - "6.12.0"
-  - "7"
+  - "node"
+  - "lts/*"
   - "8"
+  - "7"
+  - "6"
+  - "5"
+  - "4"
+
 script:
   - cp .env.default .env
   - npm run test

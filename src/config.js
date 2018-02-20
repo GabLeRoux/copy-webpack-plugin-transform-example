@@ -1,0 +1,2 @@
+window.DEBUG = __EXAMPLE_DEBUG__;
+window.API_SERVER = __EXAMPLE_API_SERVER__;

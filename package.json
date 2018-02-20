@@ -1,0 +1,16 @@
+{
+  "name": "copy-webpack-plugin-transform-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/webpack --config webpack.config.js && cat dist/Config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.4.1",
+    "webpack": "^1.15.0",
+    "webpack-dotenv-plugin": "^2.0.2"
+  }
+}

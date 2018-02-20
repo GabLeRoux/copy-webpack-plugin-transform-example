@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/webpack --config webpack.config.js && cat dist/Config.js"
+    "test": "npm run test:base && npm run test:compare:base && npm run test:child && npm run test:compare:child",
+    "test:base": "./node_modules/.bin/webpack --config webpack/webpack.config.js && cat dist/Config.js",
+    "test:child": "./node_modules/.bin/webpack --config webpack/webpack.child.config.js && cat dist/Config.js",
+    "test:compare:base": "diff dist/Config.js expectations/expected.config.js",
+    "test:compare:child": "diff dist/Config.js expectations/expected.child.config.js"
   },
   "author": "",
   "license": "ISC",

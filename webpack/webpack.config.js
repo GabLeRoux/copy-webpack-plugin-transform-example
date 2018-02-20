@@ -2,8 +2,12 @@ const path = require("path");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
+__dirname = process.cwd();
+
 const sourceFolder = path.resolve(__dirname, "./src");
 const outputFolder = path.resolve(__dirname, "./dist");
+
+process.env.EXAMPLE_API_SUBDOMAIN = 'api';
 
 module.exports = {
     devtool: "eval",
@@ -33,5 +37,5 @@ module.exports = {
 function inject_environment(content) {
     return content.toString()
         .replace('__EXAMPLE_DEBUG__', process.env.EXAMPLE_DEBUG)
-        .replace('__EXAMPLE_API_SERVER__', JSON.stringify('https://api.' + process.env.EXAMPLE_ROOT_DOMAIN));
+        .replace('__EXAMPLE_API_SERVER__', JSON.stringify('https://' + process.env.EXAMPLE_API_SUBDOMAIN + '.' + process.env.EXAMPLE_ROOT_DOMAIN));
 }

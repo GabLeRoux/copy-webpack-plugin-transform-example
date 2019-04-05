@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.4.1",
-    "webpack": "^1.15.0",
+    "copy-webpack-plugin": "^5.0.2",
+    "webpack": "^4.29.6",
     "webpack-dotenv-plugin": "^2.0.2"
   }
 }
